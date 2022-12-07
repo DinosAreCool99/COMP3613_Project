@@ -6,7 +6,7 @@ class User(db.Model):
     username =  db.Column(db.String, nullable=False)
     password = db.Column(db.String(120), nullable=False)
     authorId = db.Column(db.Integer, db.ForeignKey('author.id'), nullable=False)
-    name = db.column(db.String(120), nullable = False, unique = True)
+   
 
     def __init__(self, username, password, authorId):
         self.username = username
